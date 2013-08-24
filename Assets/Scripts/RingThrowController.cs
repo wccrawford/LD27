@@ -82,4 +82,11 @@ public class RingThrowController : MonoBehaviour {
 			}
 		}
 	}
+	
+	public void OnGameOver() {
+		Destroy(currentRing);
+		currentRing = null;
+		
+		enabled = false;
+	}
 }
