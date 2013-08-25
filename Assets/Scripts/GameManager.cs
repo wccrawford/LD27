@@ -4,7 +4,10 @@ using System.Collections;
 public class GameManager : MonoBehaviour {
 	public float timeLimit = 10f;
 	
+	public string highScoreKey;
+	
 	public UILabel timeLeftLabel;
+	public UILabel highScoreLabel;
 	public UILabel scoreLabel;
 	
 	public GameObject[] notifyGameOver;
@@ -16,6 +19,7 @@ public class GameManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		timeRemaining = timeLimit;
+		setHighScore(getHighScore());
 	}
 	
 	// Update is called once per frame
@@ -44,6 +48,24 @@ public class GameManager : MonoBehaviour {
 		score = newScore;
 		
 		scoreLabel.text = "Score: " + score.ToString();
+		
+		if(score > getHighScore()) {
+			setHighScore(score);
+		}
+	}
+	
+	public int getHighScore() {
+		if(PlayerPrefs.HasKey(highScoreKey)) {
+			return PlayerPrefs.GetInt(highScoreKey);
+		}
+		
+		return 0;
+	}
+	
+	public void setHighScore(int score) {
+		PlayerPrefs.SetInt(highScoreKey, score);
+		
+		highScoreLabel.text = "High Score: " + score.ToString();
 	}
 }
 
