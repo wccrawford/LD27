@@ -19,6 +19,9 @@ public class RingThrowController : MonoBehaviour {
 	
 	public PowerMeter powerMeter;
 	
+	public Material[] materials;
+	public int[] randomMaterials;
+	
 	private float delay = 0f;
 	private GameObject currentRing;
 	private float throwForceTime = 0f;
@@ -39,6 +42,12 @@ public class RingThrowController : MonoBehaviour {
 
 		if((delay <= 0.0f) && (currentRing == null)) {
 			currentRing = (GameObject)GameObject.Instantiate(ringPrefab, ringPlacement.position, ringRotation);
+			TargetColor tc = currentRing.GetComponentInChildren<TargetColor>();
+			
+			int colorIndex = randomMaterials[Random.Range(0, randomMaterials.Length)];
+			currentRing.renderer.material = materials[colorIndex];
+
+			tc.setColorIndex(colorIndex);
 		}
 		
 		if(currentRing != null) {

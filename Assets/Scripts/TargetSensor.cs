@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class TargetSensor : MonoBehaviour {
+	public string tagName = "Target";
 	private GameObject currentTarget = null;
 	
 	private GameManager gameManager;
@@ -20,14 +21,14 @@ public class TargetSensor : MonoBehaviour {
 	}
 	
 	void OnTriggerEnter(Collider target) {
-		if(target.tag == "Target") {
+		if(target.tag == tagName) {
 			currentTarget = target.gameObject;
 			gameManager.addScore(1);
 		}
 	}
 	
 	void OnTriggerExit(Collider target) {
-		if(target.tag == "Target") {
+		if(target.tag == tagName) {
 			currentTarget = null;
 			gameManager.addScore(-1);
 		}

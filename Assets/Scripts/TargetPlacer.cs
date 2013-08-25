@@ -32,6 +32,8 @@ public class TargetPlacer : MonoBehaviour {
 					GameObject target = (GameObject)GameObject.Instantiate(targetPrefab, pos, targetPlacement.rotation);
 					int colorIndex = randomMaterials[Random.Range(0, randomMaterials.Length)];
 					target.renderer.material = materials[colorIndex];
+					TargetColor tc = target.GetComponentInChildren<TargetColor>();
+					tc.setColorIndex(colorIndex);
 				}
 			}
 		}

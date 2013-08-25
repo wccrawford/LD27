@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Target : MonoBehaviour {
+public class TargetColor : MonoBehaviour {
 	private int colorIndex;
 	
 	public void setColorIndex(int newColorIndex) {
