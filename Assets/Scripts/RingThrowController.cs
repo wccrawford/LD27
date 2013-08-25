@@ -45,9 +45,10 @@ public class RingThrowController : MonoBehaviour {
 			TargetColor tc = currentRing.GetComponentInChildren<TargetColor>();
 			
 			int colorIndex = randomMaterials[Random.Range(0, randomMaterials.Length)];
-			currentRing.renderer.material = materials[colorIndex];
+			//currentRing.renderer.material = materials[colorIndex];
 
 			tc.setColorIndex(colorIndex);
+			tc.setMaterial(materials[colorIndex]);
 			
 			delay = 0f;
 		}

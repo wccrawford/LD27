@@ -1,6 +1,21 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\DestroyOnTargetEnter.cs">
+    <Files>
+      <File FileName="Assets\Scripts\RingThrowController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\PowerMeter.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\PlayerRotation.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GameManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\TargetSensor.cs" Line="36" Column="50" />
+      <File FileName="Assets\Scripts\TargetPlacer.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\EnableOnGameOver.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\LoadSceneOnClick.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\LockCursor.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\UnlockCursor.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\TargetColor.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\DestroyOnTargetEnter.cs" Line="7" Column="24" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -31,9 +31,10 @@ public class TargetPlacer : MonoBehaviour {
 						targetPlacement.position.z - yOffset + (y * ySpacing));
 					GameObject target = (GameObject)GameObject.Instantiate(targetPrefab, pos, targetPlacement.rotation);
 					int colorIndex = randomMaterials[Random.Range(0, randomMaterials.Length)];
-					target.renderer.material = materials[colorIndex];
+					//target.renderer.material = materials[colorIndex];
 					TargetColor tc = target.GetComponentInChildren<TargetColor>();
 					tc.setColorIndex(colorIndex);
+					tc.setMaterial(materials[colorIndex]);
 				}
 			}
 		}
