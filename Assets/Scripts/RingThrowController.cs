@@ -48,6 +48,8 @@ public class RingThrowController : MonoBehaviour {
 			currentRing.renderer.material = materials[colorIndex];
 
 			tc.setColorIndex(colorIndex);
+			
+			delay = 0f;
 		}
 		
 		if(currentRing != null) {

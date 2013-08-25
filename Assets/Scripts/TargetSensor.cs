@@ -23,14 +23,26 @@ public class TargetSensor : MonoBehaviour {
 	void OnTriggerEnter(Collider target) {
 		if(target.tag == tagName) {
 			currentTarget = target.gameObject;
-			gameManager.addScore(1);
+			TargetColor tc1 = transform.parent.GetComponentInChildren<TargetColor>();
+			TargetColor tc2 = currentTarget.transform.parent.GetComponentInChildren<TargetColor>();
+			if(tc1.getColorIndex() == tc2.getColorIndex()) {
+				gameManager.addScore(10);
+			} else {
+				gameManager.addScore(1);
+			}
 		}
 	}
 	
 	void OnTriggerExit(Collider target) {
 		if(target.tag == tagName) {
+			TargetColor tc1 = transform.parent.GetComponentInChildren<TargetColor>();
+			TargetColor tc2 = currentTarget.transform.parent.GetComponentInChildren<TargetColor>();
+			if(tc1.getColorIndex() == tc2.getColorIndex()) {
+				gameManager.addScore(-10);
+			} else {
+				gameManager.addScore(-1);
+			}
 			currentTarget = null;
-			gameManager.addScore(-1);
 		}
 	}
 	
