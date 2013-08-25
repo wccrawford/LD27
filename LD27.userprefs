@@ -6,14 +6,15 @@
       <File FileName="Assets\Scripts\PowerMeter.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\PlayerRotation.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\GameManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\TargetSensor.cs" Line="36" Column="50" />
       <File FileName="Assets\Scripts\TargetPlacer.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\EnableOnGameOver.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\LoadSceneOnClick.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\LockCursor.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\UnlockCursor.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\TargetColor.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\DestroyOnTargetEnter.cs" Line="7" Column="24" />
+      <File FileName="Assets\Scripts\DestroyOnTargetEnter.cs" Line="11" Column="3" />
+      <File FileName="Assets\Scripts\TargetSensor.cs" Line="7" Column="4" />
+      <File FileName="Assets\Scripts\ScoreOnTarget.cs" Line="33" Column="96" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
